@@ -1,6 +1,7 @@
-# SERIAL-IN-SERIAL-OUT-SHIFTREGISTER
-
-**AIM:**
+### NAME : J .BALAJI
+### REF.NO: 24901175
+### EXP :10:  SERIAL-IN-SERIAL-OUT-SHIFTREGISTER
+### AIM:
 
 To implement  SISO Shift Register using verilog and validating their functionality using their functional tables
 
@@ -8,7 +9,7 @@ To implement  SISO Shift Register using verilog and validating their functionali
 
 Quartus prime
 
-**THEORY**
+### THEORY:
 
 **SISO shift Register**
 
@@ -23,20 +24,37 @@ Figure 01 4 Bit SISO Register
 The synchronous nature of the flip-flops ensures that the shifting of data occurs in a coordinated manner. When the clock signal rises, the input data is sampled and stored in the first flip-flop. On subsequent clock pulses, the stored data propagates through the flip-flops, moving from one flip-flop to the next.
 Each D flip-flop in the circuit has a Data (D) input, a Clock (CLK) input, and an output (Q). The D input represents the data to be loaded into the flip-flop, while the CLK input is connected to the common clock signal. The output (Q) of each flip-flop is connected to the D input of the next flip-flop, forming a cascade.
 
-**Procedure**
 
-/* write all the steps invloved */
+### PROGRAM:
 
-**PROGRAM**
+SISO Shift Register
+```
+module EXP10(clk, sin, q);
+input clk;
+input sin;
+output [3:0] q;
+reg [3:0] q;
+always @(posedge clk)
+begin
+q[0] <= sin;
+q[1] <= q[0];
+q[2] <= q[1];
+q[3] <= q[2];
+end
+endmodule
+```
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming.
+### RTL LOGIC FOR SISO Shift Register:
 
-Developed by: RegisterNumber:
+![image](https://github.com/user-attachments/assets/5a1f7f1c-70e9-44df-8c24-f9aa7ef02608)
 
-*/
 
-**RTL LOGIC FOR SISO Shift Register**
+### TIMING DIGRAMS FOR SISO Shift Register:
 
-**TIMING DIGRAMS FOR SISO Shift Register**
+![image](https://github.com/user-attachments/assets/74c64092-04dd-4146-b3a2-4932ff379141)
 
-**RESULTS**
+
+### RESULTS:
+
+The 4-bit SISO (Serial-In Serial-Out) shift register was successfully implemented using Verilog in Quartus Prime. The functionality was validated using the truth table. The shift register correctly shifted the input data one bit at a time through the flip-flops on each clock pulse. The outputs q0, q1, q2, and q3 were observed to propagate the input data as expected, confirming the correct operation of the shift register.
+
