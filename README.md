@@ -1,6 +1,6 @@
 ### NAME : J .BALAJI
 ### REF.NO: 24901175
-### EXP :06:  SERIAL-IN-SERIAL-OUT-SHIFTREGISTER
+### EXP :06: IMPLEMENTATION OF Serial In Serial Out SHIFTREGISTER
 ### AIM:
 
 To implement  SISO Shift Register using verilog and validating their functionality using their functional tables
